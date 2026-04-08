@@ -20,7 +20,7 @@ export default function Footer() {
 
   function handleShareX() {
     const text = encodeURIComponent("你知道你的城市的政治嗎？");
-    const url = encodeURIComponent("https://machi-poli-taiwan.vercel.app/");
+    const url = encodeURIComponent("https://machi-poli-taiwan.vercel.app/?v=2");
     const hashtags = encodeURIComponent("城市政見");
     window.open(
       `https://twitter.com/intent/tweet?text=${text}&url=${url}&hashtags=${hashtags}`,

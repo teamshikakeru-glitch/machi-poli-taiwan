@@ -57,7 +57,7 @@ export default function ResultSection({ data, address }: ResultSectionProps) {
   const cityEmoji = getCityTypeEmoji(cityType);
 
   function handleShare() {
-    const shareUrl = `https://machi-poli-taiwan.vercel.app/`;
+    const shareUrl = `https://machi-poli-taiwan.vercel.app/?v=2`;
     const shareText = `我的城市是「${cityType}」（投票率 ${voterTurnout}%）\n你的城市呢？\n\n${shareUrl}\n\n#城市政見`;
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`;
     window.open(twitterUrl, "_blank");

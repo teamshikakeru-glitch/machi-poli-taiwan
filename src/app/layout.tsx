@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://machi-poli-taiwan.vercel.app/og.png",
+        url: "https://machi-poli-taiwan.vercel.app/og-tw.png",
         width: 1200,
         height: 630,
       },
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description:
       "只要輸入地址，就能看到縣市長、立法委員、議會組成、選舉時程。你的城市呢？",
     images: [
-      "https://machi-poli-taiwan.vercel.app/og.png",
+      "https://machi-poli-taiwan.vercel.app/og-tw.png",
     ],
   },
 };

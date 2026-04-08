@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  * {
+    image-rendering: auto;
+  }
+}
+
+@layer components {
+  /* Win95 ウィンドウ */
+  .win95-window {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #0a0a0a;
+  }
+
+  /* Win95 タイトルバー */
+  .win95-titlebar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    height: 22px;
+  }
+
+  /* Win95 凸ボタン */
+  .win95-button {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #0a0a0a;
+    padding: 4px 12px;
+    font-family: var(--font-dot-gothic), sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .win95-button:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px 0 #0a0a0a, inset -1px -1px 0 #dfdfdf;
+    padding: 5px 11px 3px 13px;
+  }
+
+  /* Win95 タイトルバーのミニボタン */
+  .win95-titlebar-btn {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #0a0a0a;
+    width: 18px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .win95-titlebar-btn:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px 0 #0a0a0a, inset -1px -1px 0 #dfdfdf;
+  }
+
+  /* Win95 凹みインプット */
+  .win95-input {
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px 0 #0a0a0a, inset -1px -1px 0 #dfdfdf;
+    padding: 4px 8px;
+    font-family: var(--font-dot-gothic), sans-serif;
+    font-size: 14px;
+    outline: none;
+  }
+
+  /* Win95 凹みラベル（バッジ） */
+  .win95-inset-label {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px 0 #0a0a0a, inset -1px -1px 0 #dfdfdf;
+    padding: 2px 8px;
+    font-size: 12px;
+  }
+
+  /* Win95 タスクバー */
+  .win95-taskbar {
+    background-color: #c0c0c0;
+    border-top: 2px solid;
+    border-color: #ffffff;
+    box-shadow: inset 0 1px 0 #dfdfdf;
+    padding: 4px 8px;
+  }
+
+  /* Win95 スタートボタン */
+  .win95-start-button {
+    background-color: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #0a0a0a;
+    padding: 2px 8px;
+    font-family: var(--font-dot-gothic), sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 28px;
+  }
+
+  .win95-start-button:active {
+    border-color: #808080 #ffffff #ffffff #808080;
+    box-shadow: inset 1px 1px 0 #0a0a0a, inset -1px -1px 0 #dfdfdf;
+  }
+
+  /* 砂時計アニメーション */
+  @keyframes hourglass {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(180deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .win95-hourglass {
+    animation: hourglass 2s ease-in-out infinite;
+    display: inline-block;
+    font-size: 48px;
+    line-height: 1;
+  }
+}

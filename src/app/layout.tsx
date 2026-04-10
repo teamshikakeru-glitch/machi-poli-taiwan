@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { DotGothic16, Press_Start_2P } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { PostHogProvider } from "./providers";
 import "./globals.css";
 
 const dotGothic16 = DotGothic16({
@@ -63,7 +64,9 @@ export default function RootLayout({
       className={`${dotGothic16.variable} ${pressStart2P.variable}`}
     >
       <body className="min-h-screen bg-[#008080] text-black font-[family-name:var(--font-dot-gothic)]">
-        {children}
+        <PostHogProvider>
+          {children}
+        </PostHogProvider>
         <Analytics />
       </body>
     </html>
